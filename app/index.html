@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <title>Egen Solutions Angular Front End Challenge</title>
+    <base href="/">
+    <script data-require="angular.js@1.5.x" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js" data-semver="1.5.5"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-resource.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+    <script data-require="jquery@2.2.0" data-semver="2.2.0" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script data-require="semantic-ui@1.11.5" data-semver="1.11.5" src="//cdn.jsdelivr.net/semantic-ui/1.11.4/semantic.min.js"></script>
+    <link data-require="semantic-ui@1.11.5" data-semver="1.11.5" rel="stylesheet" href="//cdn.jsdelivr.net/semantic-ui/1.11.5/semantic.min.css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.8.5/css/selectize.default.css">
+    <link rel="stylesheet" href="/styles/app.css">
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+</head>
+<body ng-app="EgenSolutions" ng-cloak>
+<div class="ui container">
+    <div id="mainMenu1">
+        <div class="ui large secondary inverted pointing menu">
+            <a class="toc item">
+                <i class="sidebar icon"></i>
+            </a>
+            <a href="/" class="active item">Home</a>
+            <div class="right item">
+                <a href="/signUp" class="ui inverted button">Sign Up</a>
+            </div>
+        </div>
+    </div>
+    <ng-view></ng-view>
+</div>
+<script src="/globals.js"></script>
+<script src="/app.js"></script>
+<!-- services -->
+<script src="/services/users.service.js"></script>
+<!-- /services -->
+<!-- directives -->
+<script src="/directives/ngForm.directive.js"></script>
+<script src="/directives/uniqueUserName.directive.js"></script>
+<script src="/directives/passwordStrength.directive.js"></script>
+<script src="/directives/semantic/popup.directive.js"></script>
+<script src="/directives/semantic/progress.directive.js"></script>
+<!-- /directives -->
+<!-- controllers -->
+<script src="/controllers/home.controller.js"></script>
+<script src="/controllers/signUp.controller.js"></script>
+<!-- controllers -->
+</body>
+</html>

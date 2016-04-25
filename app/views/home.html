@@ -1,0 +1,35 @@
+<h1>About My Egen Solutions Angular Front End Challenge</h1>
+<h3>Click the "Sign Up" button to see the Password Strength Angular Directive in action.</h3>
+<div class="ui message">
+    <div class="header">
+        Features
+    </div>
+    <ul class="list">
+        <li>I took this opportunity to experiment with the Semantic UI responsive design layout.</li>
+        <li>I wrote 2 directives for the Popup and Progress Semantic components. The progress component receives input from the SignUp Controller as the controller manages the feedback provided by the PasswordStrength directive.</li>
+        <li>I ran out of time, but I would have liked to have wired in the Users service to mock a service request to verify the provided user name is unique. This is common practice for me.</li>
+        <li>I wanted the PasswordStrength directive to be a attribute only directive. I often have to integrate with different design frameworks such as Bootstrap. It's often easier for the web designer to change frameworks or adjust layouts if the markup not somewhere else. Using the attributes on the input, I can modify the behavior of the directive without necessarily changing the markup or using any specific CSS framework in a template.</li>
+        <li>To demonstrate the implementation of the attributes, I required more than 1 of a couple of different qualifiers. This ability to reuse the directive by configuring it with attributes is also a common requirement for me as clients often have different password requirements and changing those requirements is not an option. </li>
+        <li>I included the ngForm directive taken from Mark Pieszak. I often cannot use form tags or assume form tags are available in my integrations with client websites. So I tend to avoid depending on the existence of a form tag with a submit action. The ngForm mimics this tag and allows the enter key to cause validation.</li>
+        <li>I always try to follow <a href="https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md" target="_blank">John Papa's Angular 1 Style Guide</a>.</li>
+    </ul>
+</div>
+<div class="ui message">
+    <div class="header">
+        Incomplete
+    </div>
+    <ul class="list">
+        <li>I have not used Karma before. It is something we are starting to get into. I do a lot of unit tests with Selenium for the front end UI and QUnit for the back end web services.</li>
+        <li>I have written unit tests for Node using Mocha. (See my <a target="_blank" href="https://github.com/chrispaskvan/destiny-ghost-api">destiny-ghost-api</a> for examples.) I feel Karma is similar. I just need some time to learn it. I had trouble getting it up and running.</li>
+        <li>I have never used Bower. I did not have time to try to figure this out unfortunately. Microsoft Visual Studio is just starting to support Bower. I have been using NuGet package manager for several years with Visual Studio.</li>
+        <li>I do not use GitHub a lot. I use Microsoft TFS at work. I am familiar with GitHub from my Node project, but I would say I am a novice.</li>
+    </ul>
+</div>
+<div class="ui message">
+    <div class="header">
+        To DO
+    </div>
+    <ul class="list">
+        <li>If I were to continue developing this project, I would want to implement an error handling and logging strategy. I would also like to better document my code with JSDoc comments.</li>
+    </ul>
+</div>

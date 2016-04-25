@@ -1,0 +1,71 @@
+<div>
+    <h1>Sign Up</h1>
+</div>
+<div class="ui form segment" data-ng-form data-ng-submit="vm.signUp()" name="vm.signUpForm">
+    <div class="two fields">
+        <div class="field" data-ng-class="{'error': vm.signUpForm.firstName.$touched && !vm.signUpForm.firstName.$valid}">
+            <label for="firstName1">First Name:</label>
+            <input name="firstName" id="firstName1" data-ng-model="vm.user.firstName" maxlength="20" required />
+            <div data-ng-show="vm.signUpForm.firstName.$touched && !vm.signUpForm.firstName.$valid">
+                <span class="ui basic red pointing prompt label transition visible">Please enter your first name.</span>
+            </div>
+        </div>
+        <div class="field" data-ng-class="{'error': vm.signUpForm.lastName.$touched && !vm.signUpForm.lastName.$valid}">
+            <label for="lastName1">Last Name:</label>
+            <input name="lastName" id="lastName1" data-ng-model="vm.user.lastName" maxlength="30" required />
+            <div data-ng-show="vm.signUpForm.lastName.$touched && !vm.signUpForm.lastName.$valid">
+                <span class="ui basic red pointing prompt label transition visible">Please enter your last name.</span>
+            </div>
+        </div>
+    </div>
+    <div class="two fields">
+        <div class="field" data-ng-class="{'error': vm.signUpForm.userName.$touched && !vm.signUpForm.userName.$valid}">
+            <div class="ui icon">
+                <label for="userName1">User Name:</label>
+                <i class="popup help icon link" data-egen-semantic-popup data-content="Twitter usernames can only contain alphanumeric characters (letters A-Z, numbers 0-9) with the exception of underscores."></i>
+            </div>
+            <div class="ui icon input">
+                <input name="userName" id="userName1" data-ng-model="vm.user.userName" maxlength="15" pattern="[A-Za-z0-9_]+"
+                       required />
+            </div>
+            <div data-ng-show="vm.signUpForm.userName.$touched && !vm.signUpForm.userName.$valid">
+                <span class="ui basic red pointing prompt label transition visible">Please enter a valid user name.</span>
+            </div>
+        </div>
+        <div class="field" data-ng-class="{'error': vm.signUpForm.password.$touched && !vm.signUpForm.password.$valid}">
+            <div class="ui icon">
+                <label for="password1">Password:</label>
+                <i class="popup help icon link" data-egen-semantic-popup data-content="For security reasons, your password must be a minimum of 8 characters and include at least one of each of the following: 3 uppercase character, lowercase character, 2 numbers, and one of the following special characters ` ~ ! @ # $ % ^ & * ( ) _ - + = { }"></i>
+            </div>
+            <div class="ui icon input">
+                <input name="password" id="password1" data-ng-model="vm.user.password"
+                       data-egen-password-strength length="8" upper="3" lower="1" numeric="2" special="1" update="vm.updateProgress" required/>
+                <data-egen-semantic-progress color="{{vm.progress.color}}" percentage="{{vm.progress.percentage}}" />
+            </div>
+            <div data-ng-show="vm.signUpForm.password.$touched && vm.signUpForm.password.$error.length">
+                <span class="ui basic red pointing prompt label transition visible">Your password must be a minimum of 8 characters.</span>
+            </div>
+            <div data-ng-show="vm.signUpForm.password.$touched && vm.signUpForm.password.$error.lowercase">
+                <span class="ui basic red pointing prompt label transition visible">Please include at least 1 lowercase letter.</span>
+            </div>
+            <div data-ng-show="vm.signUpForm.password.$touched && vm.signUpForm.password.$error.numeric">
+                <span class="ui basic red pointing prompt label transition visible">Please include at least 2 numbers.</span>
+            </div>
+            <div data-ng-show="vm.signUpForm.password.$touched && vm.signUpForm.password.$error.special">
+                <span class="ui basic red pointing prompt label transition visible">Please include at least 1 special character.</span>
+            </div>
+            <div data-ng-show="vm.signUpForm.password.$touched && vm.signUpForm.password.$error.uppercase">
+                <span class="ui basic red pointing prompt label transition visible">Please include at least 3 capital letters.</span>
+            </div>
+            <div data-ng-show="vm.signUpForm.password.$touched && !vm.signUpForm.password.$valid && !vm.signUpForm.password.$error.length && !vm.signUpForm.password.$error.uppercase && !vm.signUpForm.password.$error.lowercase && !vm.signUpForm.password.$error.numeric && !vm.signUpForm.password.$error.special">
+                <span class="ui basic red pointing prompt label transition visible">Please enter a password.</span>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button type="submit" value="SignUp" class="ui right labeled icon button">
+            <i class="right arrow icon"></i>
+            Next
+        </button>
+    </div>
+</div>
